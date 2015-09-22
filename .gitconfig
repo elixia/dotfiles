@@ -1,0 +1,7 @@
+[user]
+	name = elixia
+	email = elixir.g@gmail.com
+[ghq]
+	root = /Users/elixia/src
+[push]
+	default = simple
