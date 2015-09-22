@@ -5,7 +5,14 @@ export GOPATH=$HOME
 #   To use Homebrew's directories rather than ~/.nodebrew add to your profile:
 export NODEBREW_ROOT=/usr/local/var/nodebrew
 
-export PATH=$PATH:$GOPATH/bin:$HOME/.nodebrew/current/bin
+# for rbenv
+#   To use Homebrew's directories rather than ~/.rbenv add to your profile:
+export RBENV_ROOT=/usr/local/var/rbenv
+
+# To enable shims and autocompletion add to your profile:
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export PATH=$PATH:$GOPATH/bin:$NODEBREW_ROOT/current/bin:$RBENV_ROOT
 
 
 function peco-select-history() {
@@ -34,4 +41,9 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+# workaround for
+# https://github.com/robbyrussell/oh-my-zsh/issues/4341
+
+export LC_ALL="en_US.UTF-8"
 
