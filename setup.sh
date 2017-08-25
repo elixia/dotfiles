@@ -30,3 +30,5 @@ ln -s ~/dotfiles/.zlogin ~/.zlogin
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 #ln -s ~/dotfiles/.editorconfig ~/.editorconfig
 
+# anyenv setup
+git clone https://github.com/riywo/anyenv ~/.anyenv
